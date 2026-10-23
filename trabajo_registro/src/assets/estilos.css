@@ -1,0 +1,190 @@
+
+/* Configuración general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f0f4f8;
+  color: #243247;
+  padding: 30px 15px;
+}
+
+/* Contenedor principal */
+.contenedor {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 14px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Título principal */
+.contenedor h1 {
+  text-align: center;
+  color: #174ea6;
+  font-size: 30px;
+  margin-bottom: 30px;
+  border-bottom: 3px solid #2563eb;
+  padding-bottom: 18px;
+}
+
+/* Formulario */
+.formulario {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  padding: 25px;
+  background: #f8fafc;
+  border: 1px solid #dbe4f0;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formulario h2 {
+  text-align: center;
+  color: #174ea6;
+  margin-bottom: 10px;
+  font-size: 23px;
+}
+
+/* Campos de entrada */
+.formulario input,
+.formulario select {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  font-size: 15px;
+  background: #ffffff;
+  color: #243247;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.formulario input:focus,
+.formulario select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Botón de registrar */
+.formulario button {
+  padding: 13px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.formulario button:hover {
+  background: #174ea6;
+  transform: translateY(-1px);
+}
+
+/* Contador de pedidos */
+.contenedor h3 {
+  margin: 25px 0 18px;
+  color: #174ea6;
+  font-size: 19px;
+}
+
+/* Título de la lista */
+.contenedor h2 {
+  color: #174ea6;
+  margin: 20px 0;
+}
+
+/* Tabla de pedidos */
+.contenedor table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  margin-top: 15px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* Encabezados */
+.contenedor thead {
+  background: #174ea6;
+  color: white;
+}
+
+.contenedor th {
+  padding: 15px 12px;
+  text-align: left;
+  font-size: 14px;
+}
+
+/* Celdas */
+.contenedor td {
+  padding: 13px 12px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 14px;
+}
+
+/* Filas alternadas */
+.contenedor tbody tr:nth-child(even) {
+  background: #f1f5f9;
+}
+
+.contenedor tbody tr:hover {
+  background: #e8f1ff;
+}
+
+/* Botón eliminar */
+.contenedor td button {
+  padding: 8px 12px;
+  background: #dc2626;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.2s;
+}
+
+.contenedor td button:hover {
+  background: #991b1b;
+}
+
+/* Adaptación a celulares */
+@media (max-width: 700px) {
+  body {
+    padding: 15px 8px;
+  }
+
+  .contenedor {
+    padding: 18px 12px;
+  }
+
+  .contenedor h1 {
+    font-size: 23px;
+  }
+
+  .formulario {
+    padding: 18px 12px;
+  }
+
+  /* Permite desplazar la tabla horizontalmente */
+  .contenedor table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .contenedor th,
+  .contenedor td {
+    padding: 10px 8px;
+  }
+}
